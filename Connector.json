@@ -36,10 +36,10 @@
       },
       "defaultValue": "https://raw.githubusercontent.com/aliencube/Key-Vault-Connector-for-Logic-Apps/dev/icons/keyvault-custom-api.png"
     },
-    "customApiFunctionAppName": {
+    "customApiServiceUrl": {
       "type": "string",
       "metadata": {
-        "description": "The Name of the custom API function app"
+        "description": "The service URL the custom API will request from"
       }
     },
     "customApiSwaggerDefinition": {
@@ -57,7 +57,7 @@
       "displayName": "[parameters('customApiDisplayName')]",
       "description": "[parameters('customApiDescription')]",
       "iconUri": "[parameters('customApiIconUri')]",
-      "serviceUrl": "[concat('https://', parameters('customApiFunctionAppName'), '.azurewebsites.net/api')]",
+      "serviceUrl": "[parameters('customApiServiceUrl')]",
       "swagger": "[parameters('customApiSwaggerDefinition')]"
     }
   },
